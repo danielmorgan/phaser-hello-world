@@ -4,9 +4,6 @@
   },
   "files": [
     "src/app.ts",
-    "typings/index.d.ts",
-    "typings/phaser.d.ts",
-    "typings/pixi.d.ts",
-    "typings/p2.d.ts"
+    "typings/index.d.ts"
   ]
 }

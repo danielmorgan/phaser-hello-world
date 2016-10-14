@@ -1,5 +1,8 @@
 {
   "globalDependencies": {
     "jquery": "github:DefinitelyTyped/DefinitelyTyped/jquery/jquery.d.ts#5a37d8271be3952f31fffe1b45649c238527a011"
+  },
+  "globalDevDependencies": {
+    "phaser": "github:photonstorm/phaser/typescript/typings.json"
   }
 }
