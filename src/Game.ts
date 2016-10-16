@@ -33,7 +33,7 @@ export class Game {
         this.fireworkLauncher = new FireworkLauncher(this.game);
 
         // Input
-        this.game.input.onDown.add(this.fireworkLauncher.launch, this);
+        this.game.input.onDown.add(this.fireworkLauncher.launch, this.fireworkLauncher);
     }
 
     private update() {
