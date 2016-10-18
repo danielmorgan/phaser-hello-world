@@ -91,9 +91,9 @@
 	        _super.apply(this, arguments);
 	    }
 	    Bootstrap.prototype.preload = function () {
-	        this.load.image('background', '../assets/background.png');
-	        this.load.image('glow-directed', '../assets/glow-directed.png');
-	        this.load.image('glow', '../assets/glow.png');
+	        this.load.image('background', 'assets/background.png');
+	        this.load.image('glow-directed', 'assets/glow-directed.png');
+	        this.load.image('glow', 'assets/glow.png');
 	    };
 	    Bootstrap.prototype.create = function () {
 	        // Input
