@@ -1,5 +1,5 @@
 import { Game } from './Game';
 
-document.addEventListener('DOMContentLoaded', () => {
-    new Game;
-});
+window.onload = () => {
+    const game = new Game;
+};

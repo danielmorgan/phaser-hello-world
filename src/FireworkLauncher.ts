@@ -1,24 +1,25 @@
 export class FireworkLauncher {
-    private game: Phaser.Game;
-    private emitter: Phaser.Particles.Arcade.Emitter;
+    game: Phaser.Game;
+    emitter: Phaser.Particles.Arcade.Emitter;
 
-    public constructor(game: Phaser.Game) {
+    constructor(game: Phaser.Game) {
         this.game = game;
-        this.emitter = this.game.add.emitter();
+        this.emitter = new Phaser.Particles.Arcade.Emitter(game, game.world.centerX, game.world.height);
 
-        this.emitter.width = 1;
-        this.emitter.makeParticles(['rocket', 'rocket2']);
-        this.emitter.minParticleScale = this.emitter.maxParticleScale = 1;
-        this.emitter.setYSpeed(-800, -500);
-        this.emitter.setXSpeed(-20, 20);
-        this.emitter.minRotation = -20;
-        this.emitter.maxRotation = 20;
-        this.emitter.lifespan = 500;
+        this.bindEvents();
     }
 
-    public launch(target: Phaser.Pointer) {
-        console.log('launching', this, target);
+    bindEvents() {
+        this.game.input.onTap.add(this.launch, this);
+    }
 
-        this.emitter.emitParticle(target.worldX, this.game.world.height);
+    launch(pointer: Phaser.Pointer) {
+        this.emitter.minParticleScale = 0.03;
+        this.emitter.maxParticleScale = 0.06;
+        this.emitter.setXSpeed(-100,100);
+        this.emitter.setYSpeed(-400,-700);
+        this.emitter.gravity = 175;
+        this.emitter.makeParticles('rocket', [1, 2, 3, 4], 10);
+        this.emitter.start(true, 0, 100, 1);
     }
 }
