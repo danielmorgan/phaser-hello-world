@@ -3,7 +3,6 @@ import { LaunchSite } from './LaunchSite';
 
 export class Game extends Phaser.Game {
     private game: Phaser.Game;
-    private fireworkLauncher: FireworkLauncher;
 
     public constructor(selector: string = 'game') {
         super('100%', '100%', Phaser.AUTO, selector, null);
