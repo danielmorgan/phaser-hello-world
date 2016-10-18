@@ -1,8 +1,8 @@
 export class Bootstrap extends Phaser.State {
     preload() {
-        this.load.image('background', '../assets/background.png');
-        this.load.image('glow-directed', '../assets/glow-directed.png');
-        this.load.image('glow', '../assets/glow.png');
+        this.load.image('background', 'assets/background.png');
+        this.load.image('glow-directed', 'assets/glow-directed.png');
+        this.load.image('glow', 'assets/glow.png');
     }
 
     create() {
